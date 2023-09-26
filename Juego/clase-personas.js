@@ -1,8 +1,11 @@
-class personas{
+class persona{
     nombre;
+    intetos;
     
-
-    constructor(nombre){
+    constructor(nombre, intentos){
         this.nombre = nombre;
+        this.intentos = this.intetos;
     }  
 }
+
+export{persona}
