@@ -1,0 +1,70 @@
+
+
+
+.forninte{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+}
+.button{
+    margin: 20px;
+    display: flex;
+    width: 100px;
+    background-color: gray;
+    height: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.rojo{
+    background-color: red;
+}
+
+.rojo:hover{
+    background-color: rgb(87, 0, 0);
+    color: wheat;
+}
+
+.violeta{
+    
+    background-color: violet;
+}
+.violeta:hover{
+    background-color: rgb(96, 0, 96);
+    color: wheat;
+}
+
+.azul{
+    
+    background-color: blue;
+}
+
+.azul:hover{
+    background-color: rgb(0, 0, 98);
+    color: white;
+}
+.marron{
+    background-color: brown;
+}
+
+.marron:hover{
+    background-color: rgb(100, 26, 26);
+    color: white;
+}
+
+.fondoRojo{
+    background-color: red;
+}
+.fondoVioleta{
+    background-color: violet;
+}
+.fondoAzul{
+    background-color: blue;
+}
+.fondoMarron{
+    background-color: brown;
+}
