@@ -1,4 +1,4 @@
-import { persona } from "./clase-personas.js";
+import { Persona } from "./clase-personas.js";
 
 let jugadores = [];
 const numJugadores = parseInt(prompt("¿Cuántos jugadores van a jugar?"));
@@ -11,8 +11,9 @@ function jugar(persona) {
   console.log(`¡Bienvenido/a, ${persona.nombre}!`);
   const numeroSecreto = generarNumeroSecreto();
   let intentos = 0;
+  let maxIntentos = 10;   
 
-  while (true) {
+  while (intentos < maxIntentos) {
     const conjetura = parseInt(prompt("Adivina el número secreto (entre 1 y 100):"));
 
     if (isNaN(conjetura) || conjetura < 1 || conjetura > 100) {
@@ -32,13 +33,13 @@ function jugar(persona) {
     }
   }
 
-  persona.intentos = intentos; // Actualizar el número de intentos en el objeto persona
-  jugadores.push(persona); // Agregar el objeto persona al array de jugadores
+  persona.intentos = intentos; 
+  jugadores.push(persona); 
 }
 
 for (let i = 1; i <= numJugadores; i++) {
   const nombre = prompt(`Nombre del jugador ${i}:`);
-  const jugador = new persona(nombre, 0); // Crear el objeto persona con nombre y 0 intentos
+  const jugador = new Persona(nombre, 0); 
   jugar(jugador);
 }
 
@@ -48,3 +49,16 @@ jugadores.forEach((jugador) => (jugador.medalla = "si"));
 
 console.log(jugadores);
 console.log(nombresDeJugadores);
+
+let puntajeMaximo = 0;
+let ganador
+
+jugadores.forEach((jugador) => 
+  {
+    if(jugador.intentos > puntajeMaximo){
+      puntajeMaximo == jugador.intentos
+      ganador=jugador.nombre
+    } 
+  }
+);
+
